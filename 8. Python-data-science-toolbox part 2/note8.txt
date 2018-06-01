@@ -1,0 +1,7 @@
+- List comprehension 
+new_nums = [num + 1 for num in nums] -> more comprehensive than a for loop
+
+In [1]: nums = [12, 8, 21, 3, 16]
+In [2]: new_nums = []
+In [3]: for num in nums:
+...: new_nums.append(num + 1)

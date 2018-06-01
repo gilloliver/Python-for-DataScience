@@ -1,0 +1,32 @@
+# Drop rows in df with how='any' and print the shape
+
+print(df.dropna(how='any').shape)
+
+
+# Drop rows in df with how='all' and print the shape
+
+print(df.dropna(how='all').shape)
+
+
+# Create the dictionary: red_vs_blue
+red_vs_blue = {'Obama':'blue', 'Romney':'red'}
+
+# Use the dictionary to map the 'winner' column to the new column: election['color']
+election['color'] = election['winner'].map(red_vs_blue)
+
+Changing index of a DataFrame
+Indexes are immutable objects. This means that if you want to change or modify the index in a DataFrame, then you need to change the whole index. You will do this now, using a list comprehension to create the new index.
+
+# Stack/ Unstack / swap index
+Continuing from the previous exercise, you will now use .swaplevel(0, 1) to flip the index levels. Note they won't be sorted. To sort them, you will have to follow up with a .sort_index(). You will then obtain the original DataFrame. Note that an unsorted index leads to slicing failures.
+
+
+# Group gapminder by 'Year' and 'region': by_year_region / 'Year' and 'region' are multi-index
+by_year_region = gapminder.groupby(level=['Year','region'])
+
+# Create the dictionary: aggregator
+aggregator = {'population':'sum', 'child_mortality':'mean', 'gdp':spread}
+
+# Aggregate by_year_region using the dictionary: aggregated
+aggregated = by_year_region.agg(aggregator)
+

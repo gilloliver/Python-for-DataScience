@@ -1,0 +1,36 @@
+.value_counts -> use for categorical data
+
+df.boxplot -> plot boxplot
+
+
+
+# Melt is opposite method of pivot_table
+pd.melt(data, id_vars = [] -> specify columns you DO NOT to melt) -> RESHAPE data
+More Example: 
+# Melt
+airquality_melt = pd.melt(airquality, id_vars=['Month', 'Day'], var_name='measurement', value_name='reading')
+
+# Pivot airquality_melt: airquality_pivot
+airquality_pivot = airquality_melt.pivot_table(index=['Month', 'Day'], columns='measurement', values='reading')
+
+
+#Regular Expression
+When using a regular expression to extract multiple numbers (or multiple pattern matches, to be exact), 
+you can use the re.findall() function
+
+# Replace missing value
+.fillna(value) method to replace all the missing values 
+
+
+# Assert to check there is no missing value
+ebola.notnull().all().all()
+The first .all() method will return a True or False for each column, while the second .all() method will return a single True or False
+
+# Assert that there are no missing values
+assert ebola.notnull().all().all()
+
+# Assert that all values are >= 0
+assert (ebola >=0).all().all()
+
+Anchor the pattern to match exactly what you want by placing a ^ in the beginning and $ in the end.
+pattern = '^[A-Za-z\.\s]*$'

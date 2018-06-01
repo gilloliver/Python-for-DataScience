@@ -1,0 +1,40 @@
+- .sort_index() and .sort_values()
+- reindex(), ffill() -> chaining
+
+# Reindex weather1 using the list year with forward-fill: weather3
+weather3 = weather1.reindex(year).ffill()
+
+post2008.resample('A') -> resample by Year / Annually
+
+.pct_change()  -> Percent change over given number of periods, Growth Percent
+
+.multiply() -> Multiplication of dataframe and other, element-wise (binary operator mul)
+
+# Concatinate String
+medal = 'goal'
+"%s_top5.csv" % medal
+
+# Alias
+idx = pd.IndexSlice -> For the following data
+
+                            Hardware                   Software            \
+                             Company   Product Units    Company   Product   
+Date                                                                        
+2015-02-02 08:33:01              NaN       NaN   NaN      Hooli  Software   
+2015-02-02 20:54:49        Mediacore  Hardware   9.0        NaN       NaN   
+2015-02-03 14:14:18              NaN       NaN   NaN    Initech  Software   
+2015-02-04 15:36:29              NaN       NaN   NaN  Streeplex  Software   
+2015-02-04 21:52:45  Acme Coporation  Hardware  14.0        NaN       NaN
+
+To get 'Company' we take advantage of idx
+slice_2_8 = february.loc['2015-02-02':'2015-02-08', idx[:, 'Company']]
+
+The below codes are the same
+	sales.loc[idx[:, 'Mediacore'], :]
+	sales.loc[(slice(None),'Mediacore'),:] #This is the same
+
+	
+resample('10A') -> resample with frequency 10 year
+
+.melt -> unpivot
+

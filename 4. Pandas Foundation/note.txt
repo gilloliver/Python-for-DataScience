@@ -1,0 +1,10 @@
+df.info() -> can check non-null here
+df.value -> numpy
+
+# Extract data for which the destination airport is Dallas: dallas
+
+dallas = df['Destination Airport'].str.contrains('DAL')
+
+df_clean['sky_condition'].str.contains('OVC')
+
+weekly_mean.plot(subplots=True) -> generate separate plots 
