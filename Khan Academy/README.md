@@ -9,6 +9,7 @@
 
 ![](https://github.com/mrthlinh/Python-for-DataScience/blob/master/Khan%20Academy/pic/zTest.png)
 4. __T-Test__
+
 ![](https://github.com/mrthlinh/Python-for-DataScience/blob/master/Khan%20Academy/pic/tTest.png)
 
 5. __Hypothesis Testing__
