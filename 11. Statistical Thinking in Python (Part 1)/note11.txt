@@ -1,0 +1,4 @@
+
+New plot: Empirical Cumulative Distribution Function
+
+CDF: percentage of an event happening with value to left. e.g. percentage of speed of light less than 10.000 is 70%
